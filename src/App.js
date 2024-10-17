@@ -7,6 +7,7 @@ import Partners from "./components/Partners/Partners";
 import Teams from "./components/Teams/Teams";
 import TeamDetail from "./components/TeamDetail/TeamDetail";
 import NewsDetail from "./components/NewsDetail/NewsDetail";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -23,7 +24,6 @@ function AppRouter() {
     <Router>
       <div className="App">
         <Header />
-
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/teams" element={<Teams />} />
@@ -37,6 +37,7 @@ function AppRouter() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
