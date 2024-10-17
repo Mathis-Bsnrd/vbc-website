@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { Menu } from "@mui/material";
 import { MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   // État pour le menu "Nos équipes"
@@ -31,17 +32,19 @@ export default function Header() {
     <div>
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="Logo VBC"></img>
+          <Link to="/">
+            <img src={logo} alt="Logo VBC" />
+          </Link>
         </div>
         <nav className="nav">
           <Button
-            href="#home"
+            component={Link}
+            to="/"
             sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
           >
             Accueil
           </Button>
 
-          {/* Menu Nos équipes */}
           <Button
             id="basic-button"
             aria-controls={openTeams ? "basic-menu" : undefined}
@@ -62,13 +65,29 @@ export default function Header() {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleCloseTeams}>Équipe 1</MenuItem>
-            <MenuItem onClick={handleCloseTeams}>Équipe 2</MenuItem>
-            <MenuItem onClick={handleCloseTeams}>Équipe 3</MenuItem>
-            <MenuItem onClick={handleCloseTeams}>Équipe 4</MenuItem>
+            <MenuItem
+              component={Link}
+              to="/teams/equipe1"
+              onClick={handleCloseTeams}
+            >
+              Équipe 1
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/teams/equipe2"
+              onClick={handleCloseTeams}
+            >
+              Équipe 2
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/teams/equipe3"
+              onClick={handleCloseTeams}
+            >
+              Équipe 3
+            </MenuItem>
           </Menu>
 
-          {/* Menu Le club */}
           <Button
             id="basic-button2"
             aria-controls={openClub ? "basic-menu2" : undefined}
@@ -89,19 +108,39 @@ export default function Header() {
               "aria-labelledby": "basic-button2",
             }}
           >
-            <MenuItem onClick={handleCloseClub}>Inscription</MenuItem>
-            <MenuItem onClick={handleCloseClub}>Boutique</MenuItem>
-            <MenuItem onClick={handleCloseClub}>Planning</MenuItem>
+            <MenuItem
+              component={Link}
+              to="/club/join"
+              onClick={handleCloseClub}
+            >
+              Inscription
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/club/store"
+              onClick={handleCloseClub}
+            >
+              Boutique
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/club/schedule"
+              onClick={handleCloseClub}
+            >
+              Planning
+            </MenuItem>
           </Menu>
 
           <Button
-            href="#partners"
+            component={Link}
+            to="/partners"
             sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
           >
             Nos partenaires
           </Button>
           <Button
-            href="#contact"
+            component={Link}
+            to="/contact"
             sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
           >
             Contact
