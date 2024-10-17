@@ -3,11 +3,13 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import News from "./components/News/News";
 
 function App() {
   return (
     <div className="App">
       <h1>Page d'accueil</h1>
+      <News />
     </div>
   );
 }
