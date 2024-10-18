@@ -2,10 +2,11 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Planning from "./components/Planning/Planning";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>Page d'accueil</h1>
     </div>
   );
@@ -18,7 +19,7 @@ function TeamDetail({ teamName }) {
 function AppRouter() {
   return (
     <Router>
-      <div>
+      <div className="center-component">
         <Header />
 
         <Routes>
@@ -42,7 +43,7 @@ function AppRouter() {
           <Route path="/club" element={<h1>Le club</h1>} />
           <Route path="/club/join" element={<h1>Inscription</h1>} />
           <Route path="/club/store" element={<h1>Boutique</h1>} />
-          <Route path="/club/schedule" element={<h1>Planning</h1>} />
+          <Route path="/club/schedule" element={<Planning />} />
           <Route path="/partners" element={<h1>Nos partenaires</h1>} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>
