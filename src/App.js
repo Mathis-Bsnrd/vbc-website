@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import News from "./components/News/News";
+import Partners from "./components/Partners/Partners";
 
 function App() {
   return (
     <div className="App">
       <h1>Page d'accueil</h1>
       <News />
+      <Partners />
     </div>
   );
 }
@@ -45,7 +47,7 @@ function AppRouter() {
           <Route path="/club/join" element={<h1>Inscription</h1>} />
           <Route path="/club/store" element={<h1>Boutique</h1>} />
           <Route path="/club/schedule" element={<h1>Planning</h1>} />
-          <Route path="/partners" element={<h1>Nos partenaires</h1>} />
+          <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>
         <Footer />
