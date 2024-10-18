@@ -25,5 +25,35 @@
       "description": "Inscrivez-vous pour le stage d'arbitrage 2024 dès maintenant !Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec eu posuere libero. Nulla lectus magna, sollicitudin sed interdum non, vestibulum gravida enim. Cras porttitor accumsan nisi, maximus luctus mi suscipit sed. Nullam non elit massa. Ut et nisl nisi. Fusce porta tempor lacus et consectetur. Sed neque lorem, tempus sit.",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREo-DeS0sE8qOubZdr841xxDGYNn0yhR95Lg&s"
     }
+  ],
+  "partnersItems": [
+    {
+      "title": "McDonald's Aizenay",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqr0yyPWuwxk9L1suOD0GkjLMBcPYZPpEZlg&s"
+    },
+    {
+      "title": "France Poutres",
+      "image": "https://www.france-poutres.com/wp-content/uploads/2022/03/logo-FP-site.png"
+    },
+    {
+      "title": "Hyper U Aizenay",
+      "image": "https://archer-club-aizenay.sportsregions.fr/media/uploaded/sites/4032/produit/5b864e100f23d_dernierlogohyperuaizenay.JPG"
+    },
+    {
+      "title": "Néau contructions",
+      "image": "https://www.maconnerie-vendee-neau.fr/wp-content/uploads/2022/05/Favicon-neau-constructions.jpg"
+    },
+    {
+      "title": "Déco'Styl",
+      "image": "https://www.deco-styl-vendee.com/wp-content/uploads/2020/02/logo-hori-deco-styl-venansault-moutiers-les-mauxfaits.png"
+    },
+    {
+      "title": "Projet Linéaire",
+      "image": "https://entreprise.pole-emploi.fr/static/img/minisite/YwtUqZh0SbBBwUFY9Quk4CbOkVAC1GEM.png"
+    },
+    {
+      "title": "Gedibois",
+      "image": "https://le-de.cdn-website.com/a0b997e370474ea0a45a9d608a2f5c57/dms3rep/multi/opt/Logo_Gedibois_RVB_avec_signature-640w.png"
+    }
   ]
 }
