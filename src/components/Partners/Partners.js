@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import CustomSlider from "../CustomSlider/CustomSlider";
 import data from "../../data.json";
+import { useLocation } from "react-router-dom";
+import CustomCard from "../CustomCard/CustomCard";
 
 function Partners() {
   const [partnersItems, setPartnersItems] = useState([]);
@@ -11,9 +13,16 @@ function Partners() {
     setPartnersItems(data.partnersItems);
   }, []);
 
+  const location = useLocation();
+  const isPartnersPage = location.pathname === "/partners";
+
   return (
     <div className="Partners">
-      <CustomSlider items={partnersItems} title="Nos partenaires" />
+      {isPartnersPage ? (
+        <CustomCard items={partnersItems} title="Nos partenaires" />
+      ) : (
+        <CustomSlider items={partnersItems} title="Nos partenaires" />
+      )}
     </div>
   );
 }
