@@ -9,6 +9,7 @@ import TeamDetail from "./components/TeamDetail/TeamDetail";
 import NewsDetail from "./components/NewsDetail/NewsDetail";
 import Footer from "./components/Footer/Footer";
 import News from "./components/News/News";
+import Partners from "./components/Partners/Partners";
 
 function App() {
   return (
