@@ -1,5 +1,5 @@
 .card {
-  width: 420px;
+  width: 400px;
   margin: 16px;
 }
 
@@ -8,12 +8,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   justify-items: center;
-  padding: 20px;
+  padding: 30px;
 }
 
-.card-image {
-  height: 150px;
+.card-container .card-image {
+  height: 160px;
+  width: 100%;
   object-fit: contain;
   padding: 10px;
   box-sizing: border-box;
+  border-bottom: 1px solid rgb(236, 236, 236);
 }
