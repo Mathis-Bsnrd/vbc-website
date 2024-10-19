@@ -137,7 +137,7 @@ export default function Header() {
             </MenuItem>
             <MenuItem
               component={Link}
-              to="/club/store"
+              to="/club/shop"
               onClick={handleCloseClub}
               sx={{ minWidth: "120px", fontSize: "16px" }}
             >
