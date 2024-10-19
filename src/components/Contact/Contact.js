@@ -7,14 +7,24 @@ export default function Contact() {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const onSubmit = (data) => {
     console.log("Données du formulaire: ", data);
-    reset();
+
+    setFormValues({
+      name: "",
+      email: "",
+      message: "",
+    });
+
     setOpenSnackbar(true);
   };
 
@@ -49,7 +59,6 @@ export default function Contact() {
           },
         }}
       >
-        {/* Nom */}
         <TextField
           label="Nom"
           variant="outlined"
@@ -57,11 +66,14 @@ export default function Contact() {
           fullWidth
           margin="normal"
           {...register("name", { required: "Le nom est requis" })}
+          value={formValues.name}
+          onChange={(e) =>
+            setFormValues({ ...formValues, name: e.target.value })
+          }
           error={!!errors.name}
           helperText={errors.name ? errors.name.message : ""}
         />
 
-        {/* Adresse mail */}
         <TextField
           label="Adresse mail"
           variant="outlined"
@@ -75,11 +87,14 @@ export default function Contact() {
               message: "Veuillez entrer une adresse mail valide",
             },
           })}
+          value={formValues.email}
+          onChange={(e) =>
+            setFormValues({ ...formValues, email: e.target.value })
+          }
           error={!!errors.email}
           helperText={errors.email ? errors.email.message : ""}
         />
 
-        {/* Message */}
         <TextField
           label="Message"
           variant="outlined"
@@ -89,11 +104,14 @@ export default function Contact() {
           multiline
           rows={4}
           {...register("message", { required: "Le message est requis" })}
+          value={formValues.message}
+          onChange={(e) =>
+            setFormValues({ ...formValues, message: e.target.value })
+          }
           error={!!errors.message}
           helperText={errors.message ? errors.message.message : ""}
         />
 
-        {/* Bouton de soumission */}
         <Button
           type="submit"
           variant="contained"
@@ -103,7 +121,6 @@ export default function Contact() {
         </Button>
       </Box>
 
-      {/* Snackbar pour afficher le message de succès */}
       <Snackbar
         open={openSnackbar}
         autoHideDuration={5000}
