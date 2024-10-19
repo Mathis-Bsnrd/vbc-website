@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { TextField, Button, Box } from "@mui/material";
+import { TextField, Button, Box, Snackbar, Alert } from "@mui/material";
 
 export default function Contact() {
   const {
@@ -10,9 +10,19 @@ export default function Contact() {
     reset,
   } = useForm();
 
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
   const onSubmit = (data) => {
     console.log("Données du formulaire: ", data);
     reset();
+    setOpenSnackbar(true);
+  };
+
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenSnackbar(false);
   };
 
   return (
@@ -46,9 +56,9 @@ export default function Contact() {
           required
           fullWidth
           margin="normal"
-          {...register("nom", { required: "Le nom est requis" })}
-          error={!!errors.nom}
-          helperText={errors.nom ? errors.nom.message : ""}
+          {...register("name", { required: "Le nom est requis" })}
+          error={!!errors.name}
+          helperText={errors.name ? errors.name.message : ""}
         />
 
         {/* Adresse mail */}
@@ -92,6 +102,22 @@ export default function Contact() {
           Envoyer
         </Button>
       </Box>
+
+      {/* Snackbar pour afficher le message de succès */}
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={5000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          Message envoyé avec succès !
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
