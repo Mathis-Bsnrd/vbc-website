@@ -1,9 +1,7 @@
 import React from "react";
 import "./Header.css";
 import logo from "../../logo-vbc.png";
-import { Button } from "@mui/material";
-import { Menu } from "@mui/material";
-import { MenuItem } from "@mui/material";
+import { Button, Menu, MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link } from "react-router-dom";
 
@@ -40,7 +38,13 @@ export default function Header() {
           <Button
             component={Link}
             to="/"
-            sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
+            sx={{
+              color: "white",
+              fontWeight: "bold",
+              textTransform: "none",
+              minWidth: "120px",
+              fontSize: "16px",
+            }}
           >
             Accueil
           </Button>
@@ -52,7 +56,13 @@ export default function Header() {
             aria-expanded={openTeams ? "true" : undefined}
             onClick={handleClickTeams}
             endIcon={<KeyboardArrowDownIcon />}
-            sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
+            sx={{
+              color: "white",
+              fontWeight: "bold",
+              textTransform: "none",
+              minWidth: "120px",
+              fontSize: "16px",
+            }}
           >
             Nos équipes
           </Button>
@@ -69,6 +79,7 @@ export default function Header() {
               component={Link}
               to="/teams/equipe1"
               onClick={handleCloseTeams}
+              sx={{ minWidth: "120px", fontSize: "16px" }}
             >
               Équipe 1
             </MenuItem>
@@ -76,6 +87,7 @@ export default function Header() {
               component={Link}
               to="/teams/equipe2"
               onClick={handleCloseTeams}
+              sx={{ minWidth: "120px", fontSize: "16px" }}
             >
               Équipe 2
             </MenuItem>
@@ -83,6 +95,7 @@ export default function Header() {
               component={Link}
               to="/teams/equipe3"
               onClick={handleCloseTeams}
+              sx={{ minWidth: "120px", fontSize: "16px" }}
             >
               Équipe 3
             </MenuItem>
@@ -95,7 +108,13 @@ export default function Header() {
             aria-expanded={openClub ? "true" : undefined}
             onClick={handleClickClub}
             endIcon={<KeyboardArrowDownIcon />}
-            sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
+            sx={{
+              color: "white",
+              fontWeight: "bold",
+              textTransform: "none",
+              minWidth: "120px",
+              fontSize: "16px",
+            }}
           >
             Le club
           </Button>
@@ -112,6 +131,7 @@ export default function Header() {
               component={Link}
               to="/club/join"
               onClick={handleCloseClub}
+              sx={{ minWidth: "120px", fontSize: "16px" }}
             >
               Inscription
             </MenuItem>
@@ -119,6 +139,7 @@ export default function Header() {
               component={Link}
               to="/club/store"
               onClick={handleCloseClub}
+              sx={{ minWidth: "120px", fontSize: "16px" }}
             >
               Boutique
             </MenuItem>
@@ -126,6 +147,7 @@ export default function Header() {
               component={Link}
               to="/club/schedule"
               onClick={handleCloseClub}
+              sx={{ minWidth: "120px", fontSize: "16px" }}
             >
               Planning
             </MenuItem>
@@ -134,14 +156,26 @@ export default function Header() {
           <Button
             component={Link}
             to="/partners"
-            sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
+            sx={{
+              color: "white",
+              fontWeight: "bold",
+              textTransform: "none",
+              minWidth: "120px",
+              fontSize: "16px",
+            }}
           >
             Nos partenaires
           </Button>
           <Button
             component={Link}
             to="/contact"
-            sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
+            sx={{
+              color: "white",
+              fontWeight: "bold",
+              textTransform: "none",
+              minWidth: "120px",
+              fontSize: "16px",
+            }}
           >
             Contact
           </Button>
