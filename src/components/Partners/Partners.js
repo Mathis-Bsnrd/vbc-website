@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useEffect, useState } from "react";
 import CustomSlider from "../CustomSlider/CustomSlider";
 import data from "../../data.json";
@@ -19,7 +18,10 @@ function Partners() {
   return (
     <div className="Partners">
       {isPartnersPage ? (
-        <CustomCard items={partnersItems} title="Nos partenaires" />
+        <div>
+          <h1>Nos partenaires</h1>
+          <CustomCard items={partnersItems} title="Nos partenaires" />
+        </div>
       ) : (
         <CustomSlider items={partnersItems} title="Nos partenaires" />
       )}

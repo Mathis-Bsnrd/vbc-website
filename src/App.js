@@ -22,7 +22,7 @@ function TeamDetail({ teamName }) {
 function AppRouter() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Header />
 
         <Routes>
@@ -47,6 +47,7 @@ function AppRouter() {
           <Route path="/club/join" element={<h1>Inscription</h1>} />
           <Route path="/club/store" element={<h1>Boutique</h1>} />
           <Route path="/club/schedule" element={<h1>Planning</h1>} />
+          <Route path="/club/news" element={<News />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>

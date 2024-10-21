@@ -129,6 +129,13 @@ export default function Header() {
             >
               Planning
             </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/club/news"
+              onClick={handleCloseClub}
+            >
+              Actualités
+            </MenuItem>
           </Menu>
 
           <Button
