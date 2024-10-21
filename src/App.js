@@ -23,7 +23,7 @@ function TeamDetail({ teamName }) {
 function AppRouter() {
   return (
     <Router>
-      <div>
+      <div className="main">
         <Header />
         <Routes>
           {/* Route pour la page d'accueil */}
@@ -50,8 +50,8 @@ function AppRouter() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </Router>
   );
 }
