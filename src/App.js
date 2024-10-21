@@ -24,7 +24,7 @@ function App() {
 function AppRouter() {
   return (
     <Router>
-      <div className="App">
+      <div className="main">
         <Header />
         <Routes>
           <Route path="/" element={<App />} />
@@ -39,8 +39,8 @@ function AppRouter() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </Router>
   );
 }
