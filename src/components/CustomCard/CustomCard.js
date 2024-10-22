@@ -4,19 +4,25 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./CustomCard.css";
 
 export default function CustomCard({ items }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const formatTitle = (title) => {
     return title.toLowerCase().replace(/\s+/g, "-");
   };
 
   const handleCardClick = (item) => {
+    const currentPath = location.pathname;
     const formattedTitle = formatTitle(item.title);
-    navigate(`/teams/${formattedTitle}`, { state: { team: item } });
+    if (item.link) {
+      window.open(item.link, "_blank");
+    } else {
+      navigate(`${currentPath}/${formattedTitle}`, { state: { team: item } });
+    }
   };
 
   return (
