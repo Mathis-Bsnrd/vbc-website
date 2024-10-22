@@ -46,47 +46,12 @@ export default function Header() {
           </Button>
 
           <Button
-            id="basic-button"
-            aria-controls={openTeams ? "basic-menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={openTeams ? "true" : undefined}
-            onClick={handleClickTeams}
-            endIcon={<KeyboardArrowDownIcon />}
+            component={Link}
+            to="/teams"
             sx={{ color: "white", fontWeight: "bold", textTransform: "none" }}
           >
             Nos équipes
           </Button>
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorElTeams}
-            open={openTeams}
-            onClose={handleCloseTeams}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            <MenuItem
-              component={Link}
-              to="/teams/equipe1"
-              onClick={handleCloseTeams}
-            >
-              Équipe 1
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/teams/equipe2"
-              onClick={handleCloseTeams}
-            >
-              Équipe 2
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/teams/equipe3"
-              onClick={handleCloseTeams}
-            >
-              Équipe 3
-            </MenuItem>
-          </Menu>
 
           <Button
             id="basic-button2"
