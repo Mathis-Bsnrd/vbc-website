@@ -6,6 +6,7 @@ import News from "./components/News/News";
 import Partners from "./components/Partners/Partners";
 import Teams from "./components/Teams/Teams";
 import TeamDetail from "./components/TeamDetail/TeamDetail";
+import NewsDetail from "./components/NewsDetail/NewsDetail";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function AppRouter() {
           <Route path="/club/store" element={<h1>Boutique</h1>} />
           <Route path="/club/schedule" element={<h1>Planning</h1>} />
           <Route path="/club/news" element={<News />} />
+          <Route path="/club/news/:newsTitle" element={<NewsDetail />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>

@@ -18,10 +18,22 @@ export default function CustomCard({ items }) {
   const handleCardClick = (item) => {
     const currentPath = location.pathname;
     const formattedTitle = formatTitle(item.title);
+
     if (item.link) {
       window.open(item.link, "_blank");
     } else {
-      navigate(`${currentPath}/${formattedTitle}`, { state: { team: item } });
+      const stateKey =
+        currentPath === "/club/news"
+          ? "news"
+          : currentPath === "/teams"
+          ? "team"
+          : null;
+
+      if (stateKey) {
+        navigate(`${currentPath}/${formattedTitle}`, {
+          state: { [stateKey]: item },
+        });
+      }
     }
   };
 

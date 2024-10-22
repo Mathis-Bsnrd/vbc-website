@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./CustomSlider.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CustomSlider = ({ items, title }) => {
   // Configuration du carousel
@@ -33,12 +34,32 @@ const CustomSlider = ({ items, title }) => {
     ],
   };
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const formatTitle = (title) => {
+    return title.toLowerCase().replace(/\s+/g, "-");
+  };
+
+  const handleSliderClick = (item) => {
+    const formattedTitle = formatTitle(item.title);
+    if (item.link) {
+      window.open(item.link, "_blank");
+    } else {
+      navigate(`/club/news/${formattedTitle}`, { state: { news: item } });
+    }
+  };
+
   return (
     <div className="custom-slider">
       <h2>{title}</h2>
       <Slider {...settings}>
         {items.map((item, index) => (
-          <div key={index} className="item">
+          <div
+            key={index}
+            className="item"
+            onClick={() => handleSliderClick(item)}
+          >
             <img src={item.image} alt={item.title} className="item-image" />
             <div className="card-text">
               <h3>{item.title}</h3>
