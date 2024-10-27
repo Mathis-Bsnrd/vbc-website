@@ -3,26 +3,31 @@
     {
       "title": "Victoire de l'équipe sénior",
       "description": "L'équipe a remporté le match 100-12 contre Mouilleron.",
+      "date": "28/10/2024",
       "image": "https://cdn.helloasso.com/img/logos/venansault-basket-club-ffe0e0b4b7d74d9fbe5675e8f0bee22f.jpg"
     },
     {
       "title": "Tournoi 3x3",
       "description": "Rejoignez-nous le 15 novembre pour un tournoi 3x3.",
+      "date": "28/10/2024",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsbVA_2SSkWgXBy-vB5OiPcVjJ2ncciVdVhg&s"
     },
     {
       "title": "Nouvelle saison",
       "description": "La saison 2024 commence bientôt, soyez prêts !",
+      "date": "28/10/2024",
       "image": "https://venansaultbasket.fr/wp-content/uploads/2022/07/Site-internet.png"
     },
     {
       "title": "Nouvelle boutique !",
       "description": "Découvrez la nouvelle boutique du club.",
+      "date": "28/10/2024",
       "image": "https://cdn.helloasso.com/img/photos/shops/croppedimage-a52ba4d540524b5b89e88a16c8db425b.png"
     },
     {
       "title": "Stage d'arbitrage",
       "description": "Inscrivez-vous pour le stage d'arbitrage 2024 dès maintenant !Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec eu posuere libero. Nulla lectus magna, sollicitudin sed interdum non, vestibulum gravida enim. Cras porttitor accumsan nisi, maximus luctus mi suscipit sed. Nullam non elit massa. Ut et nisl nisi. Fusce porta tempor lacus et consectetur. Sed neque lorem, tempus sit.",
+      "date": "28/10/2024",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREo-DeS0sE8qOubZdr841xxDGYNn0yhR95Lg&s"
     }
   ],
