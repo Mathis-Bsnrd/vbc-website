@@ -8,16 +8,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link } from "react-router-dom";
 
 export default function Header() {
-  // État pour le menu "Nos équipes"
-  const [anchorElTeams, setAnchorElTeams] = React.useState(null);
-  const openTeams = Boolean(anchorElTeams);
-  const handleClickTeams = (event) => {
-    setAnchorElTeams(event.currentTarget);
-  };
-  const handleCloseTeams = () => {
-    setAnchorElTeams(null);
-  };
-
   // État pour le menu "Le club"
   const [anchorElClub, setAnchorElClub] = React.useState(null);
   const openClub = Boolean(anchorElClub);

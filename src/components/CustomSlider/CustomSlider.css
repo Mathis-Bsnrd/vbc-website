@@ -1,8 +1,9 @@
 .custom-slider {
-    max-width: 100%;
+    max-width: 95%;
     text-align: center;
     padding: 25px;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .item {
