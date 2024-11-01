@@ -91,8 +91,11 @@ const CustomSlider = ({ items, title }) => {
           >
             <img src={item.image} alt={item.title} className="item-image" />
             <div className="card-text">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <div className="card-title">
+                <h3 className="item-title">{item.title}</h3>
+                <p className="item-date">{item.date}</p>
+              </div>
+              <p className="item-description">{item.description}</p>
             </div>
           </div>
         ))}
