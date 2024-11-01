@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from "react";
 import CustomSlider from "../CustomSlider/CustomSlider";
-import data from "../../data.json";
 import { useLocation } from "react-router-dom";
 import CustomCard from "../CustomCard/CustomCard";
+import { getPartners } from "../../api/partnerApi";
 
 function Partners() {
   const [partnersItems, setPartnersItems] = useState([]);
 
   useEffect(() => {
-    // Simule le chargement des données depuis le JSON
-    setPartnersItems(data.partnersItems);
+    const loadPartners = async () => {
+      try {
+        const data = await getPartners();
+        setPartnersItems(data);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des partenaires", error);
+      }
+    };
+
+    loadPartners();
   }, []);
 
   const location = useLocation();
